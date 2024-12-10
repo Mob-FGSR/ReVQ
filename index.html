@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="ReVQ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ReVQ</title>
+
+  <style type="text/css">svg:not(:root).svg-inline--fa{overflow:visible}.svg-inline--fa{display:inline-block;font-size:inherit;height:1em;overflow:visible;vertical-align:-.125em}.svg-inline--fa.fa-lg{vertical-align:-.225em}.svg-inline--fa.fa-w-1{width:.0625em}.svg-inline--fa.fa-w-2{width:.125em}.svg-inline--fa.fa-w-3{width:.1875em}.svg-inline--fa.fa-w-4{width:.25em}.svg-inline--fa.fa-w-5{width:.3125em}.svg-inline--fa.fa-w-6{width:.375em}.svg-inline--fa.fa-w-7{width:.4375em}.svg-inline--fa.fa-w-8{width:.5em}.svg-inline--fa.fa-w-9{width:.5625em}.svg-inline--fa.fa-w-10{width:.625em}.svg-inline--fa.fa-w-11{width:.6875em}.svg-inline--fa.fa-w-12{width:.75em}.svg-inline--fa.fa-w-13{width:.8125em}.svg-inline--fa.fa-w-14{width:.875em}.svg-inline--fa.fa-w-15{width:.9375em}.svg-inline--fa.fa-w-16{width:1em}.svg-inline--fa.fa-w-17{width:1.0625em}.svg-inline--fa.fa-w-18{width:1.125em}.svg-inline--fa.fa-w-19{width:1.1875em}.svg-inline--fa.fa-w-20{width:1.25em}.svg-inline--fa.fa-pull-left{margin-right:.3em;width:auto}.svg-inline--fa.fa-pull-right{margin-left:.3em;width:auto}.svg-inline--fa.fa-border{height:1.5em}.svg-inline--fa.fa-li{width:2em}.svg-inline--fa.fa-fw{width:1.25em}.fa-layers svg.svg-inline--fa{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.fa-layers{display:inline-block;height:1em;position:relative;text-align:center;vertical-align:-.125em;width:1em}.fa-layers svg.svg-inline--fa{-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter,.fa-layers-text{display:inline-block;position:absolute;text-align:center}.fa-layers-text{left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter{background-color:#ff253a;border-radius:1em;-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff;height:1.5em;line-height:1;max-width:5em;min-width:1.5em;overflow:hidden;padding:.25em;right:0;text-overflow:ellipsis;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-bottom-right{bottom:0;right:0;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom right;transform-origin:bottom right}.fa-layers-bottom-left{bottom:0;left:0;right:auto;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom left;transform-origin:bottom left}.fa-layers-top-right{right:0;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-top-left{left:0;right:auto;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top left;transform-origin:top left}.fa-lg{font-size:1.3333333333em;line-height:.75em;vertical-align:-.0667em}.fa-xs{font-size:.75em}.fa-sm{font-size:.875em}.fa-1x{font-size:1em}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-6x{font-size:6em}.fa-7x{font-size:7em}.fa-8x{font-size:8em}.fa-9x{font-size:9em}.fa-10x{font-size:10em}.fa-fw{text-align:center;width:1.25em}.fa-ul{list-style-type:none;margin-left:2.5em;padding-left:0}.fa-ul>li{position:relative}.fa-li{left:-2em;position:absolute;text-align:center;width:2em;line-height:inherit}.fa-border{border:solid .08em #eee;border-radius:.1em;padding:.2em .25em .15em}.fa-pull-left{float:left}.fa-pull-right{float:right}.fa.fa-pull-left,.fab.fa-pull-left,.fal.fa-pull-left,.far.fa-pull-left,.fas.fa-pull-left{margin-right:.3em}.fa.fa-pull-right,.fab.fa-pull-right,.fal.fa-pull-right,.far.fa-pull-right,.fas.fa-pull-right{margin-left:.3em}.fa-spin{-webkit-animation:fa-spin 2s infinite linear;animation:fa-spin 2s infinite linear}.fa-pulse{-webkit-animation:fa-spin 1s infinite steps(8);animation:fa-spin 1s infinite steps(8)}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.fa-rotate-90{-webkit-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{-webkit-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{-webkit-transform:scale(-1,1);transform:scale(-1,1)}.fa-flip-vertical{-webkit-transform:scale(1,-1);transform:scale(1,-1)}.fa-flip-both,.fa-flip-horizontal.fa-flip-vertical{-webkit-transform:scale(-1,-1);transform:scale(-1,-1)}:root .fa-flip-both,:root .fa-flip-horizontal,:root .fa-flip-vertical,:root .fa-rotate-180,:root .fa-rotate-270,:root .fa-rotate-90{-webkit-filter:none;filter:none}.fa-stack{display:inline-block;height:2em;position:relative;width:2.5em}.fa-stack-1x,.fa-stack-2x{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.svg-inline--fa.fa-stack-1x{height:1em;width:1.25em}.svg-inline--fa.fa-stack-2x{height:2em;width:2.5em}.fa-inverse{color:#fff}.sr-only{border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.sr-only-focusable:active,.sr-only-focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}.svg-inline--fa .fa-primary{fill:var(--fa-primary-color,currentColor);opacity:1;opacity:var(--fa-primary-opacity,1)}.svg-inline--fa .fa-secondary{fill:var(--fa-secondary-color,currentColor);opacity:.4;opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-primary{opacity:.4;opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-secondary{opacity:1;opacity:var(--fa-primary-opacity,1)}.svg-inline--fa mask .fa-primary,.svg-inline--fa mask .fa-secondary{fill:#000}.fad.fa-inverse{color:#fff}</style>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./resources/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./resources/css/bulma.min.css">
+  <link rel="stylesheet" href="./resources/css/index.css">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+</head>
+
+<body>
+  <section class="head-section">
+    <div class="title">No-Reference Rendered Video Quality Assessment:<br> Dataset and Metrics</div>
+    <div class="author-line">
+      <div class="author-block href-author-color">
+        <a href="https://sp-young.github.io/" target="_blank">Sipeng Yang</a><sup>1</sup>
+      </div>
+
+      <div class="author-block ">
+        Jiayu Ji<sup>1</sup>
+      </div>
+      <div class="author-block href-author-color">
+        Qingchuan Zhu<sup>1</sup>
+      </div>
+      <div class="author-block href-author-color">
+        Zhiyao Yang<sup>2</sup>
+      </div>
+      <div class="author-block href-author-color">
+        <a href="http://www.cad.zju.edu.cn/home/jin/" target="_blank">Xiaogang Jin</a><sup>1</sup>
+      </div>
+    </div>
+
+    <div class="inst-line">
+      <div class="inst-block ">
+        <sup>1</sup>State Key Lab of CAD&CG, Zhejiang University
+      </div>
+      <div class="inst-block ">
+        <sup>2</sup>OPPO Computing & Graphics Research Institute
+      </div>
+    </div>
+
+    <div class="link-line">
+      <span class="link-block">
+        <a href="resources/paper/No_Reference_Rendered_Video_Quality_Assessment__Dataset_and_Metrics.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+          <span class="icon">
+            <svg class="svg-inline--fa fa-file-pdf fa-w-12" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-pdf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z"></path></svg><!-- <i class="fas fa-file-pdf"></i> Font Awesome fontawesome.com -->
+          </span>
+          <span>Paper</span>
+        </a>
+      </span>
+      <span class="link-block">
+        <a href="resources/paper/No_Reference_Rendered_Video_Quality_Assessment__Dataset_and_Metrics.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+          <span class="icon">
+            <svg class="svg-inline--fa fa-cloud fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cloud" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M400 288c0 52.9-43.1 96-96 96H96c-52.9 0-96-43.1-96-96s43.1-96 96-96c0-70.7 57.3-128 128-128s128 57.3 128 128c52.9 0 96 43.1 96 96zm96 96c0-70.7-57.3-128-128-128-0.9 0-1.8 0-2.7 0.1C355.2 143.6 296.3 96 224 96 149.3 96 96 149.3 96 224c-53.4 0-96 42.6-96 96s42.6 96 96 96h208c70.7 0 128-57.3 128-128z"></path>
+            </svg>
+          </span>
+          <span>Dataset</span>
+        </a>
+      </span>
+      <span class="link-block">
+        <a href="resources/paper/No_Reference_Rendered_Video_Quality_Assessment__Dataset_and_Metrics.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+          <span class="icon">
+            <svg class="svg-inline--fa fa-app fa-w-14" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="app" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M176 32h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48H176c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48zm240 144h-48c-13.3 0-24 10.7-24 24v288c0 13.3 10.7 24 24 24h48c13.3 0 24-10.7 24-24V200c0-13.3-10.7-24-24-24zm-320 0H48c-13.3 0-24 10.7-24 24v288c0 13.3 10.7 24 24 24h48c13.3 0 24-10.7 24-24V200c0-13.3-10.7-24-24-24z"></path>
+            </svg>
+          </span>
+          <span>Software</span>
+        </a>
+      </span>
+    </div>
+  </section>
+
+  <section class="intro-video-section">
+    <div class="intro-video-container">
+      <video src="https://github.com/Mob-FGSR/ReVQ/blob/main/resources/videos/ReVQ-2ksmall.mp4?raw=true" controls></video>
+    </div>
+    <div class="hint intro-hint">Introduction Video</div>
+  </section>
+
+  <section class="abstract-section">
+    <div class="abstract-title">Abstract</div>
+    <div class="abstract-container">Quality assessment of videos is crucial for many computer graphics applications, including video games, virtual reality, and
+      augmented reality, where visual performance has a significant impact on user experience. When test videos cannot be perfectly
+      aligned with references or when references are unavailable, the significance of no-reference video quality assessment (NR-VQA)
+      methods is undeniable. However, existing NR-VQA datasets and metrics are primarily focused on camera-captured videos; applying
+      them directly to rendered videos would result in biased predictions, as rendered videos are more prone to temporal artifacts. <br><br>To
+      address this, we present a large rendering-oriented video dataset with subjective quality annotations, as well as a designed NR-VQA
+      metric specific to rendered videos. The proposed dataset includes a wide range of 3D scenes and rendering settings, with quality
+      scores annotated for various display types to better reflect real-world application scenarios. Building on this dataset, we calibrated our
+      NR-VQA metric to assess rendered video quality by looking at both image quality and temporal stability. We compare our metric to
+      existing NR-VQA metrics, demonstrating its superior performance on rendered videos. Finally, examples illustrate how our metric can
+      be used to benchmark supersampling methods and evaluate frame generation strategies for real-time rendering.</div>
+  </section>
+
+  <section class="dataset-section">
+    <div class="dataset-title"><h2>Dataset</h2></div>
+    <div class="dataset-container">
+      <div class="dataset-process-text-firstline">
+        The proposed dataset,
+      </div>
+      <div class="dataset-name">ReVQ-2K</div>
+      <div class="dataset-process-text-firstline">:</div>
+
+      <div class="dataset-process-text">
+        <ul>
+          <li>Features a diverse range of 3D scenes.</li>
+          <li>Applies a variety of <strong>rendering configurations</strong>, supplemented by various <strong>supersampling</strong> and <strong>post-processing</strong> techniques.</li>
+          <li>Includes perceptual quality scores annotated on both <strong>smartphone screens</strong> and <strong>desktop displays</strong> to replicate real-world scenarios.
+          </li>
+      </div>
+      <div class="dataset-process-image">
+        <img src="resources/images/process.png">
+      </div>
+    </div>
+
+    <div id="videos-container">
+      <div class="dataset-image">
+        <div class="dataset-image-title">
+          <h2>3D Scenes</h2>
+        </div>
+        <img src="resources/images/3DScenes.jpg">
+        <div class="hint image-hint">Examples of 3D scenes from the ReVQ-2k dataset</div>
+      </div>
+      <div class="videos-title">Showcases</div>
+      <div class="slider-title">Urban</div>
+      <div class="slider-wrapper urban">
+        <div class="slider">
+          <div class="slide"><video src="https://github.com/Mob-FGSR/ReVQ/blob/main/resources/videos/1080p/urban/CityPark14_12211212.mp4?raw=true" controls loop></div>
+          <div class="slide"><video src="https://github.com/Mob-FGSR/ReVQ/blob/main/resources/videos/1080p/urban/CyberPunk01_22222220.mp4?raw=true" controls loop></div>
+            <div class="slide"><video src="https://github.com/Mob-FGSR/ReVQ/blob/main/resources/videos/1080p/urban/WesternTown04_22221101.mp4?raw=true" controls loop></div>
+          <div class="slide"><video src="https://github.com/Mob-FGSR/ReVQ/blob/main/resources/videos/1080p/urban/Factory03_22220101.mp4?raw=true" controls loop></div>
+          <div class="slide"><video src="https://github.com/Mob-FGSR/ReVQ/blob/main/resources/videos/1080p/urban/WesternTown07_12222011.mp4?raw=true" controls loop></div>
+        </div>
+        <div class="slider-navigation-previous adjust">
+          <svg viewBox="0 0 50 80" xml:space="preserve">
+            <polyline fill="currentColor" stroke-width=".5em" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "></polyline>
+          </svg>
+        </div>
+        <div class="slider-navigation-next adjust">
+          <svg viewBox="0 0 50 80" xml:space="preserve">
+            <polyline fill="currentColor" stroke-width=".5em" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "></polyline>
+          </svg>
+        </div>
+      </div>
+
+      <div class="slider-title">Interior</div>
+      <div class="slider-wrapper interior">
+        <div class="slider">
+          <div class="slide"><video src="https://github.com/Mob-FGSR/ReVQ/blob/main/resources/videos/1080p/interior/Condominium01_12220201.mp4?raw=true" controls loop></div>
+          <div class="slide"><video src="https://github.com/Mob-FGSR/ReVQ/blob/main/resources/videos/1080p/interior/CyberPunk05_21212000.mp4?raw=true" controls loop></div>
+          <div class="slide"><video src="https://github.com/Mob-FGSR/ReVQ/blob/main/resources/videos/1080p/interior/SpectrumGalaxy03_22222111.mp4?raw=true" controls loop></div>
+          <div class="slide"><video src="https://github.com/Mob-FGSR/ReVQ/blob/main/resources/videos/1080p/interior/Condominium02_21201100.mp4?raw=true" controls loop></div>
+          <div class="slide"><video src="https://github.com/Mob-FGSR/ReVQ/blob/main/resources/videos/1080p/interior/RuinedCrypt09_22020012.mp4?raw=true" controls loop></div>
+        </div>
+        <div class="slider-navigation-previous adjust">
+          <svg viewBox="0 0 50 80" xml:space="preserve">
+            <polyline fill="currentColor" stroke-width=".5em" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "></polyline>
+          </svg>
+        </div>
+        <div class="slider-navigation-next adjust">
+          <svg viewBox="0 0 50 80" xml:space="preserve">
+            <polyline fill="currentColor" stroke-width=".5em" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "></polyline>
+          </svg>
+        </div>
+      </div>
+
+      <div class="slider-title">Landscapes</div>
+      <div class="slider-wrapper landscape">
+        <div class="slider">
+          <div class="slide"><video src="https://github.com/Mob-FGSR/ReVQ/blob/main/resources/videos/1080p/lanscape/CityPark10_22210110.mp4?raw=true" controls loop></div>
+          <div class="slide"><video src="https://github.com/Mob-FGSR/ReVQ/blob/main/resources/videos/1080p/lanscape/MedievalGame03_22211120.mp4?raw=true" controls loop></div>
+          <div class="slide"><video src="https://github.com/Mob-FGSR/ReVQ/blob/main/resources/videos/1080p/lanscape/RuinedCrypt07_22222200.mp4?raw=true" controls loop></div>
+          <div class="slide"><video src="https://github.com/Mob-FGSR/ReVQ/blob/main/resources/videos/1080p/lanscape/SunTemple07_11220121.mp4?raw=true" controls loop></div>
+          <div class="slide"><video src="https://github.com/Mob-FGSR/ReVQ/blob/main/resources/videos/1080p/lanscape/MedievalGame08_22220022.mp4?raw=true" controls loop></div>
+        </div>
+        <div class="slider-navigation-previous adjust">
+          <svg viewBox="0 0 50 80" xml:space="preserve">
+            <polyline fill="currentColor" stroke-width=".5em" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "></polyline>
+          </svg>
+        </div>
+        <div class="slider-navigation-next adjust">
+          <svg viewBox="0 0 50 80" xml:space="preserve">
+            <polyline fill="currentColor" stroke-width=".5em" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "></polyline>
+          </svg>
+        </div>
+      </div>
+
+      <div class="slider-title">Cartoon </div>
+      <div class="slider-wrapper cartoon">
+        <div class="slider">
+          <div class="slide"><video src="https://github.com/Mob-FGSR/ReVQ/blob/main/resources/videos/1080p/cartoon/AdvancedVillage01_12220210.mp4?raw=true" controls loop></div>
+          <div class="slide"><video src="https://github.com/Mob-FGSR/ReVQ/blob/main/resources/videos/1080p/cartoon/ChristmasTown02_22010111.mp4?raw=true" controls loop></div>
+          <div class="slide"><video src="https://github.com/Mob-FGSR/ReVQ/blob/main/resources/videos/1080p/cartoon/ParadiseLost02_20211001.mp4?raw=true" controls loop></div>
+          <div class="slide"><video src="https://github.com/Mob-FGSR/ReVQ/blob/main/resources/videos/1080p/cartoon/AdvancedVillage04_21122022.mp4?raw=true" controls loop></div>
+          <div class="slide"><video src="https://github.com/Mob-FGSR/ReVQ/blob/main/resources/videos//1080p/cartoon/ParadiseLost08_20201001.mp4?raw=true" controls loop></div>
+        </div>
+        <div class="slider-navigation-previous adjust">
+          <svg viewBox="0 0 50 80" xml:space="preserve">
+            <polyline fill="currentColor" stroke-width=".5em" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "></polyline>
+          </svg>
+        </div>
+        <div class="slider-navigation-next adjust">
+          <svg viewBox="0 0 50 80" xml:space="preserve">
+            <polyline fill="currentColor" stroke-width=".5em" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "></polyline>
+          </svg>
+        </div>
+      </div>
+
+      <div class="slider-title">Weather</div>
+      <div class="slider-wrapper weather">
+        <div class="slider">
+          <div class="slide"><video src="https://github.com/Mob-FGSR/ReVQ/blob/main/resources/videos/1080p/weather/ChristmasTown03_22210210.mp4?raw=true" controls loop></div>
+          <div class="slide"><video src="https://github.com/Mob-FGSR/ReVQ/blob/main/resources/videos/1080p/weather/RuinedCrypt05_22222200.mp4?raw=true" controls loop></div>
+          <div class="slide"><video src="https://github.com/Mob-FGSR/ReVQ/blob/main/resources/videos/1080p/weather/PolarFacility02_21100000.mp4?raw=true" controls loop></div>
+          <div class="slide"><video src="https://github.com/Mob-FGSR/ReVQ/blob/main/resources/videos/1080p/weather/ChristmasTown04_12210120.mp4?raw=true" controls loop></div>
+          <div class="slide"><video src="https://github.com/Mob-FGSR/ReVQ/blob/main/resources/videos/1080p/weather/ParadiseLost03_22111220.mp4?raw=true" controls loop></div>
+        </div>
+        <div class="slider-navigation-previous adjust">
+          <svg viewBox="0 0 50 80" xml:space="preserve">
+            <polyline fill="currentColor" stroke-width=".5em" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "></polyline>
+          </svg>
+        </div>
+        <div class="slider-navigation-next adjust">
+          <svg viewBox="0 0 50 80" xml:space="preserve">
+            <polyline fill="currentColor" stroke-width=".5em" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "></polyline>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div id="config-container">
+      <div class="dataset-image-title">
+        <h2>Rendering Configuration</h2>
+      </div>
+      <div class="hint config-hint">The <a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/scalability-reference-for-unreal-engine" target="_blank">scalability reference</a> of Unreal Engine was adopted for our rendering settings.</div>
+      <table class="config-table">
+        <thead>
+          <tr>
+            <th class="config-thead">Resolution Scale: 0</th>
+            <th class="config-thead">Resolution Scale: 1</th>
+            <th class="config-thead">Resolution Scale: 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="code-block-area">
+                <div class="code-block">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td class="code-line-index">1</td>
+                        <td>r.ScreenPercentage=<span style="color: rgb(240, 175, 122);">50</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="code-block-area">
+                <div class="code-block">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td class="code-line-index">1</td>
+                        <td>r.ScreenPercentage=<span style="color: rgb(240, 175, 122);">75</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="code-block-area">
+                <div class="code-block">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td class="code-line-index">1</td>
+                        <td>r.ScreenPercentage=<span style="color: rgb(240, 175, 122);">100</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="config-table">
+        <thead>
+          <tr>
+            <th class="config-thead">View Distance: 0</th>
+            <th class="config-thead">View Distance: 1</th>
+            <th class="config-thead">View Distance: 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="code-block-area">
+                <div class="code-block">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td class="code-line-index">1</td>
+                        <td>r.ViewDistanceScale=<span style="color: rgb(240, 175, 122);">0.4</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="code-block-area">
+                <div class="code-block">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td class="code-line-index">1</td>
+                        <td>r.ViewDistanceScale=<span style="color: rgb(240, 175, 122);">0.6</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="code-block-area">
+                <div class="code-block">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td class="code-line-index">1</td>
+                        <td>r.ViewDistanceScale=<span style="color: rgb(240, 175, 122);">1.0</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="config-table">
+        <thead>
+          <tr>
+            <th class="config-thead">Anti-Aliasing: 0</th>
+            <th class="config-thead">Anti-Aliasing: 1</th>
+            <th class="config-thead">Anti-Aliasing: 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="code-block-area">
+                <div class="code-block">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td class="code-line-index">1</td>
+                        <td>r.PostProcessAAQuality=<span style="color: rgb(240, 175, 122);">0</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="code-block-area">
+                <div class="code-block">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td class="code-line-index">1</td>
+                        <td>r.PostProcessAAQuality=<span style="color: rgb(240, 175, 122);">2</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="code-block-area">
+                <div class="code-block">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td class="code-line-index">1</td>
+                        <td>r.PostProcessAAQuality=<span style="color: rgb(240, 175, 122);">4</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="config-table">
+        <thead>
+          <tr>
+            <th class="config-thead">Post Process: 0</th>
+            <th class="config-thead">Post Process: 1</th>
+            <th class="config-thead">Post Process: 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="code-block-area">
+                <div class="code-block">
+                  <table>
+                    <tbody>
+                      <tr><td class="code-line-index">1</td><td>r.MotionBlurQuality=<span style="color: rgb(240, 175, 122);">0</span></td></tr>
+                      <tr><td class="code-line-index">2</td><td>r.BlurGBuffer=<span style="color: rgb(240, 175, 122);">0</span></td></tr>
+                      <tr><td class="code-line-index">3</td><td>r.AmbientOcclusionLevels=<span style="color: rgb(240, 175, 122);">0</span></td></tr>
+                      <tr><td class="code-line-index">4</td><td>r.AmbientOcclusionRadiusScale=<span style="color: rgb(240, 175, 122);">1.7</span></td></tr>
+                      <tr><td class="code-line-index">5</td><td>r.DepthOfFieldQuality=<span style="color: rgb(240, 175, 122);">0</span></td></tr>
+                      <tr><td class="code-line-index">6</td><td>r.RenderTargetPoolMin=<span style="color: rgb(240, 175, 122);">300</span></td></tr>
+                      <tr><td class="code-line-index">7</td><td>r.LensFlareQuality=<span style="color: rgb(240, 175, 122);">0</span></td></tr>
+                      <tr><td class="code-line-index">8</td><td>r.SceneColorFringeQuality=<span style="color: rgb(240, 175, 122);">0</span></td></tr>
+                      <tr><td class="code-line-index">9</td><td>r.EyeAdaptationQuality=<span style="color: rgb(240, 175, 122);">0</span></td></tr>
+                      <tr><td class="code-line-index">10</td><td>r.BloomQuality=<span style="color: rgb(240, 175, 122);">4</span></td></tr>
+                      <tr><td class="code-line-index">11</td><td>r.FastBlurThreshold=<span style="color: rgb(240, 175, 122);">0</span></td></tr>
+                      <tr><td class="code-line-index">12</td><td>r.Upscale.Quality=<span style="color: rgb(240, 175, 122);">1</span></td></tr>
+                      <tr><td class="code-line-index">13</td><td>r.Tonemapper.GrainQuantization=<span style="color: rgb(240, 175, 122);">0</span></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="code-block-area">
+                <div class="code-block">
+                  <table>
+                    <tbody>
+                      <tr><td class="code-line-index">1</td><td>r.MotionBlurQuality=<span style="color: rgb(240, 175, 122);">3</span></td></tr>
+                      <tr><td class="code-line-index">2</td><td>r.BlurGBuffer=<span style="color: rgb(240, 175, 122);">0</span></td></tr>
+                      <tr><td class="code-line-index">3</td><td>r.AmbientOcclusionLevels=<span style="color: rgb(240, 175, 122);">1</span></td></tr>
+                      <tr><td class="code-line-index">4</td><td>r.AmbientOcclusionRadiusScale=<span style="color: rgb(240, 175, 122);">1.7</span></td></tr>
+                      <tr><td class="code-line-index">5</td><td>r.DepthOfFieldQuality=<span style="color: rgb(240, 175, 122);">1</span></td></tr>
+                      <tr><td class="code-line-index">6</td><td>r.RenderTargetPoolMin=<span style="color: rgb(240, 175, 122);">350</span></td></tr>
+                      <tr><td class="code-line-index">7</td><td>r.LensFlareQuality=<span style="color: rgb(240, 175, 122);">0</span></td></tr>
+                      <tr><td class="code-line-index">8</td><td>r.SceneColorFringeQuality=<span style="color: rgb(240, 175, 122);">0</span></td></tr>
+                      <tr><td class="code-line-index">9</td><td>r.EyeAdaptationQuality=<span style="color: rgb(240, 175, 122);">0</span></td></tr>
+                      <tr><td class="code-line-index">10</td><td>r.BloomQuality=<span style="color: rgb(240, 175, 122);">4</span></td></tr>
+                      <tr><td class="code-line-index">11</td><td>r.FastBlurThreshold=<span style="color: rgb(240, 175, 122);">2</span></td></tr>
+                      <tr><td class="code-line-index">12</td><td>r.Upscale.Quality=<span style="color: rgb(240, 175, 122);">2</span></td></tr>
+                      <tr><td class="code-line-index">13</td><td>r.Tonemapper.GrainQuantization=<span style="color: rgb(240, 175, 122);">0</span></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="code-block-area">
+                <div class="code-block">
+                  <table>
+                    <tbody>
+                      <tr><td class="code-line-index">1</td><td>r.MotionBlurQuality=<span style="color: rgb(240, 175, 122);">4</span></td></tr>
+                      <tr><td class="code-line-index">2</td><td>r.BlurGBuffer=<span style="color: rgb(240, 175, 122);">1</span></td></tr>
+                      <tr><td class="code-line-index">3</td><td>r.AmbientOcclusionLevels=<span style="color: rgb(240, 175, 122);">3</span></td></tr>
+                      <tr><td class="code-line-index">4</td><td>r.AmbientOcclusionRadiusScale=<span style="color: rgb(240, 175, 122);">1</span></td></tr>
+                      <tr><td class="code-line-index">5</td><td>r.DepthOfFieldQuality=<span style="color: rgb(240, 175, 122);">2</span></td></tr>
+                      <tr><td class="code-line-index">6</td><td>r.RenderTargetPoolMin=<span style="color: rgb(240, 175, 122);">400</span></td></tr>
+                      <tr><td class="code-line-index">7</td><td>r.LensFlareQuality=<span style="color: rgb(240, 175, 122);">2</span></td></tr>
+                      <tr><td class="code-line-index">8</td><td>r.SceneColorFringeQuality=<span style="color: rgb(240, 175, 122);">1</span></td></tr>
+                      <tr><td class="code-line-index">9</td><td>r.EyeAdaptationQuality=<span style="color: rgb(240, 175, 122);">2</span></td></tr>
+                      <tr><td class="code-line-index">10</td><td>r.BloomQuality=<span style="color: rgb(240, 175, 122);">5</span></td></tr>
+                      <tr><td class="code-line-index">11</td><td>r.FastBlurThreshold=<span style="color: rgb(240, 175, 122);">7</span></td></tr>
+                      <tr><td class="code-line-index">12</td><td>r.Upscale.Quality=<span style="color: rgb(240, 175, 122);">3</span></td></tr>
+                      <tr><td class="code-line-index">13</td><td>r.Tonemapper.GrainQuantization=<span style="color: rgb(240, 175, 122);">1</span></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="config-table">
+        <thead>
+          <tr>
+            <th class="config-thead">Texture Quality: 0</th>
+            <th class="config-thead">Texture Quality: 1</th>
+            <th class="config-thead">Texture Quality: 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="code-block-area">
+                <div class="code-block">
+                  <table>
+                    <tbody>
+                      <tr><td class="code-line-index">1</td><td>r.Streaming.MipBias=<span style="color: rgb(240, 175, 122);">2.5</span></td></tr>
+                      <tr><td class="code-line-index">2</td><td>r.MaxAnisotropy=<span style="color: rgb(240, 175, 122);">0</span></td></tr>
+                      <tr><td class="code-line-index">3</td><td>r.Streaming.PoolSize=<span style="color: rgb(240, 175, 122);">200</span></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="code-block-area">
+                <div class="code-block">
+                  <table>
+                    <tbody>
+                      <tr><td class="code-line-index">1</td><td>r.Streaming.MipBias=<span style="color: rgb(240, 175, 122);">1</span></td></tr>
+                      <tr><td class="code-line-index">2</td><td>r.MaxAnisotropy=<span style="color: rgb(240, 175, 122);">2</span></td></tr>
+                      <tr><td class="code-line-index">3</td><td>r.Streaming.PoolSize=<span style="color: rgb(240, 175, 122);">400</span></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="code-block-area">
+                <div class="code-block">
+                  <table>
+                    <tbody>
+                      <tr><td class="code-line-index">1</td><td>r.Streaming.MipBias=<span style="color: rgb(240, 175, 122);">0</span></td></tr>
+                      <tr><td class="code-line-index">2</td><td>r.MaxAnisotropy=<span style="color: rgb(240, 175, 122);">8</span></td></tr>
+                      <tr><td class="code-line-index">3</td><td>r.Streaming.PoolSize=<span style="color: rgb(240, 175, 122);">1000</span></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="config-table">
+        <thead>
+          <tr>
+            <th class="config-thead">Effects Quality: 0</th>
+            <th class="config-thead">Effects Quality: 1</th>
+            <th class="config-thead">Effects Quality: 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="code-block-area">
+                <div class="code-block">
+                  <table>
+                    <tbody>
+                      <tr><td class="code-line-index">1</td><td>r.TranslucencyLightingVolumeDim=<span style="color: rgb(240, 175, 122);">24</span></td></tr>
+                      <tr><td class="code-line-index">2</td><td>r.RefractionQuality=<span style="color: rgb(240, 175, 122);">0</span></td></tr>
+                      <tr><td class="code-line-index">3</td><td>r.SSR=<span style="color: rgb(240, 175, 122);">0</span></td></tr>
+                      <tr><td class="code-line-index">4</td><td>r.SceneColorFormat=<span style="color: rgb(240, 175, 122);">3</span></td></tr>
+                      <tr><td class="code-line-index">5</td><td>r.DetailMode=<span style="color: rgb(240, 175, 122);">0</span></td></tr>
+                      <tr><td class="code-line-index">6</td><td>r.TranslucencyVolumeBlur=<span style="color: rgb(240, 175, 122);">0</span></td></tr>
+                      <tr><td class="code-line-index">7</td><td>r.MaterialQualityLevel=<span style="color: rgb(240, 175, 122);">0</span></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="code-block-area">
+                <div class="code-block">
+                  <table>
+                    <tbody>
+                      <tr><td class="code-line-index">1</td><td>r.TranslucencyLightingVolumeDim=<span style="color: rgb(240, 175, 122);">32</span></td></tr>
+                      <tr><td class="code-line-index">2</td><td>r.RefractionQuality=<span style="color: rgb(240, 175, 122);">0</span></td></tr>
+                      <tr><td class="code-line-index">3</td><td>r.SSR=<span style="color: rgb(240, 175, 122);">0</span></td></tr>
+                      <tr><td class="code-line-index">4</td><td>r.SceneColorFormat=<span style="color: rgb(240, 175, 122);">3</span></td></tr>
+                      <tr><td class="code-line-index">5</td><td>r.DetailMode=<span style="color: rgb(240, 175, 122);">1</span></td></tr>
+                      <tr><td class="code-line-index">6</td><td>r.TranslucencyVolumeBlur=<span style="color: rgb(240, 175, 122);">0</span></td></tr>
+                      <tr><td class="code-line-index">7</td><td>r.MaterialQualityLevel=<span style="color: rgb(240, 175, 122);">1</span></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="code-block-area">
+                <div class="code-block">
+                  <table>
+                    <tbody>
+                      <tr><td class="code-line-index">1</td><td>r.TranslucencyLightingVolumeDim=<span style="color: rgb(240, 175, 122);">64</span></td></tr>
+                      <tr><td class="code-line-index">2</td><td>r.RefractionQuality=<span style="color: rgb(240, 175, 122);">2</span></td></tr>
+                      <tr><td class="code-line-index">3</td><td>r.SSR=<span style="color: rgb(240, 175, 122);">1</span></td></tr>
+                      <tr><td class="code-line-index">4</td><td>r.SceneColorFormat=<span style="color: rgb(240, 175, 122);">4</span></td></tr>
+                      <tr><td class="code-line-index">5</td><td>r.DetailMode=<span style="color: rgb(240, 175, 122);">2</span></td></tr>
+                      <tr><td class="code-line-index">6</td><td>r.TranslucencyVolumeBlur=<span style="color: rgb(240, 175, 122);">1</span></td></tr>
+                      <tr><td class="code-line-index">7</td><td>r.MaterialQualityLevel=<span style="color: rgb(240, 175, 122);">1</span></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="config-table">
+        <thead>
+          <tr>
+            <th class="config-thead">FSR2</th>
+            <th class="config-thead">DLSS</th>
+            <th class="config-thead">TAAU</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="width: 33.3%;">
+              <div class="code-block-area">
+                <div class="code-block">
+                  <table>
+                    <tbody>
+                      <tr><td class="code-line-index">1</td><td>r.FidelityFX.FSR2.QualityMode=<span style="color: rgb(240, 175, 122);">2</span></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </td>
+            <td style="width: 33.3%;">
+              <div class="code-block-area">
+                <div class="code-block">
+                  <table>
+                    <tbody>
+                      <tr><td class="code-line-index">1</td><td>r.NGX.DLSS.Quality=<span style="color: rgb(240, 175, 122);">-1</span></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </td>
+            <td style="width: 33.3%;">
+              <div class="code-block-area">
+                <div class="code-block">
+                  <table>
+                    <tbody>
+                      <tr><td class="code-line-index">1</td><td>r.TemporalAA.Upsampling=<span style="color: rgb(240, 175, 122);">1</span></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="software-container">
+      <div class="label-title">Annotation Software</div>
+      <div class="slider-title">Desktop Platform</div>
+      <img src="resources/images/Desktop.PNG" style="border-radius: 10px; height: 420px; padding-bottom: 20px;">
+      <div class="slider-title">Smartphone Platform</div>
+      <img src="resources/images/smartphone.jpg" style="border-radius: 10px; height: 320px; padding-bottom: 20px;">
+    </div>
+
+    <div id="label-container">
+      <div class="label-title">
+        <h2>Quality Scores</h2>
+      </div>
+      <div class="hint label-hint"><span style="color: #555555; font-weight: 600; font-size: 1.1rem;">OA-MOS:  </span>The overall mean opinion score (OA-MOS) reflects the overall quality of videos by considering factors such as colorfulness, block artifacts, visual blurring, and temporal disruptions like flickering.</div>
+      <div class="hint label-hint"><span style="color: #555555; font-weight: 600; font-size: 1.1rem;">TS-MOS:  </span>The temporal stability mean opinion score (TS-MOS) reflects the temporal stability of videos, focusing on issues like flickering, moving jaggies, and other temporal artifacts that critically affect rendered video quality.</div>
+      <div class="label-figure">
+        <div class="label-subtitle">
+          <h2>720p</h2>
+        </div>
+        <img src="resources/images/720p_score_distribution_final_web.png">
+      </div>
+      <div class="label-figure">
+        <div class="label-subtitle">
+          <h2>1080p</h2>
+        </div>
+        <img src="resources/images/1080p_score_distribution_final_web.png">
+      </div>
+      <div class="label-figure">
+        <div class="label-subtitle">
+          <h2>2k</h2>
+        </div>
+        <img src="resources/images/2k_score_distribution_final_web.png">
+      </div>
+      <div class="label-figure">
+        <div class="label-subtitle">
+          <h2>All</h2>
+        </div>
+        <img src="resources/images/score_distribution_final_web.png">
+      </div>
+    </div>
+    
+  </section>
+
+  <section class="metrics-section">
+    <div class="metrics-container">
+      <div class="metrics-title">
+        Metrics
+      </div>
+      <div class="metrics-text">
+        Building on the ReVQ-2k dataset, we develop a new two-stream NR-VQA metric to predict rendered video quality. The architecture of our proposed model, which is divided into two main components: <strong>image qualityassessment</strong> and <strong>temporal stability analysis</strong></strong>.
+      </div>
+      <div class="metrics-text">
+        <span style="font-family: 'goole-sans-medium'; font-weight: 600; font-size: 1.1rem;">Image Quality Assessment: </span>In this stream, we evaluate the overall image quality of videos. Given the extensive analysis in existing literature, we adopt the cropping strategy and Swin transformer (Swin-T) model employed in FAST-VQA. This stream considers factors such as clarity and appropriate exposure, in alignment with existing NR-VQA methods, and evaluates static rendering artifacts like Moir´e patterns.
+      </div>
+      <div class="metrics-text">
+        <span style="font-family: 'goole-sans-medium'; font-weight: 600; font-size: 1.1rem;">Temporal Stability Analysis: </span>In this stream, we crop a series of images from consecutive video frames, align them via motion estimation, and assess their temporal stability using image differencing. The results from both streams are then combined through a multilayer perceptron (MLP) to regress the overall video quality,
+      </div>
+      <div class="metrics-arch-image">
+        <img src="resources/images/pipeline demo.png">
+      </div>
+      <div class="hint image-hint">Overview of our NR-VQA model</div>
+      
+      <div class="img-dif-title">Image Differencing</div>
+      <div class="metrics-text"> With generated motion vectors and disocclusion maps, each subset \( K_i \) is subjected to <strong>backward warping</strong> and <strong>disoccluded pixel removal</strong>, resulting in an aligned subset. We <strong>calculate image differencing</strong> for adjacent frames and for frames separated by one, two, and three intervals, enabling detection of flickering across various frequencies. The image differences are then fed into a depth-wise separable convolutions-based image difference detector to evaluate pixel-level temporal stability. Finally, the stability maps from all subsets are subjected to average pooling and a MLP to regress the temporal stability score.</div>
+      <div class="img-dif-image" >
+        <img src="resources/images/img_diff.png.png">
+      </div>
+    </div>
+  </section>
+
+  <section class="cmp-section">
+    <div class="cmp-container">
+      <div class="cmp-title">Comparison</div>
+      <div class="cmp-text">The quantitative analysis in this table clearly demonstrates that our proposed model significantly outperforms existing SOTA methods. Without temporal stability supervision, our model exceeds the top-performing baseline by <strong>1.1%</strong> and <strong>0.8%</strong> in PLCC and SRCC, respectively. This margin increases to <strong>3.9%</strong> and <strong>3.2%</strong> when our model incorporates temporal stability scores for training.</div>
+      <img src="resources/images/cmp_image_1.png">
+      <div class="hint table-hint">Quantitative comparison of various NR-VQA methods on the ReVQ-2k datase</div>
+      <div class="blank"></div>
+
+      <div class="cmp-text">This table demonstrates that our method is competitive in assessing camera-captured video quality. For most datasets, our method achieves <strong>top-2</strong> performance in both PLCC and SRCC scores. Specifically, our method shows superior performance on the <strong>LIVE-YT-Gaming</strong> dataset, showing potential future extensions to NR-VQA for cloud gaming and streaming games.</div>
+      <img src="resources/images/cmp_image_2.png">
+      <div class="hint table-hint"> Comparison of NR-VQA methods on established datasets</div>
+    </div>
+  </section>
+
+  <section class="bibtex-section">
+    <div class="bibtex-container">
+      <div class="bibtex-title">BibTex</div>
+      <div class="bibtex-content">
+        <pre><code>@misc{????????????????????,
+  title={No-Reference Rendered Video Quality Assessment: Dataset and Metrics}, 
+  author={Yang, Sipeng and Ji, Jiayu and Zhu, Qingchuan and Yang, Zhiyao and Jin, Xiaogang},
+  year={2024},
+  eprint={??????},
+  archivePrefix={??????},
+  primaryClass={??????},
+  url={??????}, 
+}         </code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="footer-section">
+    <div class="footer-container">
+      This page uses several components from the <a href="https://bulma.io/" target="_blank">Bulma CSS framework</a>.
+      We also drew inspiration from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template?tab=readme-ov-file/" target="_blank">Academic Project Page Template</a> for our website's design. Special thanks.
+    </div>
+  </section>
+
+
+  <script>
+    // function toggleContent1() {
+    //     var content = document.getElementById('videos-container');
+    //     if (content) {
+    //         content.classList.toggle('show');
+    //     } else {
+    //         console.error("Element with id 'dataset-image' not found.");
+    //     }
+    // }
+
+    // function toggleContent2() {
+    //     var content = document.getElementById('config-container');
+    //     if (content) {
+    //         content.classList.toggle('show');
+    //     } else {
+    //         console.error("Element with id 'config-container' not found.");
+    //     }
+    // }
+
+    // function toggleContent3() {
+    //     var content = document.getElementById('label-container');
+    //     if (content) {
+    //         content.classList.toggle('show');
+    //     } else {
+    //         console.error("Element with id 'dataset-image' not found.");
+    //     }
+    // }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const sliderWrapper_urban = document.querySelector('.slider-wrapper.urban');
+      const slider_urban = sliderWrapper_urban.querySelector('.slider'); 
+      const prevButton_urban = sliderWrapper_urban.querySelector('.slider-navigation-previous'); 
+      const nextButton_urban = sliderWrapper_urban.querySelector('.slider-navigation-next'); 
+      const slideWidth = slider_urban.querySelector('.slide').clientWidth; 
+
+      prevButton_urban.addEventListener('click', function() {
+        slider_urban.scrollBy({ left: -slideWidth, behavior: 'smooth' });
+      });
+
+      nextButton_urban.addEventListener('click', function() {
+        slider_urban.scrollBy({ left: slideWidth, behavior: 'smooth' }); 
+      });
+
+      const sliderWrapper_interior = document.querySelector('.slider-wrapper.interior');
+      const slider_interior = sliderWrapper_interior.querySelector('.slider'); 
+      const prevButton_interior = sliderWrapper_interior.querySelector('.slider-navigation-previous'); 
+      const nextButton_interior = sliderWrapper_interior.querySelector('.slider-navigation-next'); 
+
+      prevButton_interior.addEventListener('click', function() {
+        slider_interior.scrollBy({ left: -slideWidth, behavior: 'smooth' });
+      });
+
+      nextButton_interior.addEventListener('click', function() {
+        slider_interior.scrollBy({ left: slideWidth, behavior: 'smooth' }); 
+      });
+
+      const sliderWrapper_landscapes = document.querySelector('.slider-wrapper.landscape');
+      const slider_landscapes = sliderWrapper_landscapes.querySelector('.slider'); 
+      const prevButton_landscapes = sliderWrapper_landscapes.querySelector('.slider-navigation-previous'); 
+      const nextButton_landscapes = sliderWrapper_landscapes.querySelector('.slider-navigation-next'); 
+
+      prevButton_landscapes.addEventListener('click', function() {
+        slider_landscapes.scrollBy({ left: -slideWidth, behavior: 'smooth' });
+      });
+
+      nextButton_landscapes.addEventListener('click', function() {
+        slider_landscapes.scrollBy({ left: slideWidth, behavior: 'smooth' }); 
+      });
+
+      const sliderWrapper_cartoon = document.querySelector('.slider-wrapper.cartoon');
+      const slider_cartoon = sliderWrapper_cartoon.querySelector('.slider'); 
+      const prevButton_cartoon = sliderWrapper_cartoon.querySelector('.slider-navigation-previous'); 
+      const nextButton_cartoon = sliderWrapper_cartoon.querySelector('.slider-navigation-next'); 
+
+      prevButton_cartoon.addEventListener('click', function() {
+        slider_cartoon.scrollBy({ left: -slideWidth, behavior: 'smooth' });
+      });
+
+      nextButton_cartoon.addEventListener('click', function() {
+        slider_cartoon.scrollBy({ left: slideWidth, behavior: 'smooth' }); 
+      });
+
+      const sliderWrapper_weather = document.querySelector('.slider-wrapper.weather');
+      const slider_weather = sliderWrapper_weather.querySelector('.slider'); 
+      const prevButton_weather = sliderWrapper_weather.querySelector('.slider-navigation-previous'); 
+      const nextButton_weather = sliderWrapper_weather.querySelector('.slider-navigation-next'); 
+
+      prevButton_weather.addEventListener('click', function() {
+        slider_weather.scrollBy({ left: -slideWidth, behavior: 'smooth' });
+      });
+
+      nextButton_weather.addEventListener('click', function() {
+        slider_weather.scrollBy({ left: slideWidth, behavior: 'smooth' }); 
+      });
+
+
+
+    });
+  </script>
+
+</body>
+
+</html>
